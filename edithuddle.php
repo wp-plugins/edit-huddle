@@ -8,7 +8,7 @@ Plugin Name: Edit Huddle
 Plugin URI: http://edithuddle.com/wordpress
 Description: Plugin for edithuddle.com to recieve user feedback on blog content.
 Author: Tim Barsness / Edit Huddle
-Version: 0.0.1
+Version: 0.0.2
 Author URI: http://barsnesssolutions.com/
 */
 
@@ -37,7 +37,6 @@ function edithuddle_init() {
 	}
 }
 add_action('init', 'edithuddle_init');
-
 
 function edithuddle_current_page_url() {
 	$pageURL = 'http';
