@@ -1,14 +1,14 @@
 <?
 /**
  * @package edithuddle
- * @version 0.0.2
+ * @version 0.0.3
  */
 /*
 Plugin Name: Edit Huddle
 Plugin URI: http://edithuddle.com/wordpress
 Description: Plugin for edithuddle.com to recieve user feedback on blog content.
 Author: Tim Barsness / Edit Huddle
-Version: 0.0.2
+Version: 0.0.3
 Author URI: http://barsnesssolutions.com/
 */
 
@@ -51,4 +51,13 @@ function edithuddle_current_page_url() {
 	}
 	$pageURL .= $_SERVER["REQUEST_URI"];
 	return $pageURL;
+}
+
+function edithuddle_add_admin_actions(){
+	add_options_page("Edit Huddle Settings", "Edit Huddle", "edithuddle", "edithuddle", "edithuddle_admin");
+}
+add_action('admin_menu', 'edithuddle_add_admin_actions');
+
+function edithuddle_admin() {
+	include('edithuddle_admin.php');
 }
