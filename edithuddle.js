@@ -1,7 +1,7 @@
 jQuery(function(){
 	jQuery('.edithuddle-button-container').html('<button class="edit-huddle-button">Fix It</button><div id="edithuddle-instructions" class="ui-widget ui-widget-content ui-helper-hidden ui-corner-bottom" style="width:128px; padding: 10px; font-size:0.9em;">Found an error?<br/><br/>Just select the problematic text to submit a report</div><div id="edithuddle-popout" class="ui-widget ui-widget-header ui-helper-hidden ui-corner-all" style="width:100px; font-size:0.8em; padding:10px"><div class="ui-helper-hidden" id="edithuddle-popout-choices"><form>The error is:<br/><input type="radio" name="error" value="spelling">Spelling</input><br/><input type="radio" name="error" value="grammar">Grammar</input><br/><input type="radio" name="error" value="factual">Factual</input><br/><input type="radio" name="error" value="website">Website</input></form></div><div class="ui-helper-hidden" id="edithuddle-popout-error"></div><div class="ui-helper-hidden" id="edithuddle-popout-thanks">Thanks! Your correction has been submitted.</div></div>');
 	
-	jQuery(".edit-huddle-button").button({icons: {secondary: "ui-icon-triangle-1-s"} }).click(function(){ 
+	jQuery(".edit-huddle-button").button({icons: {secondary: "ui-icon-triangle-1-s"} }).click(function() { 
 		console.log(jQuery("#edithuddle-instructions").html());
 		jQuery("#edithuddle-instructions").show("fast", function(){
 			setTimeout(function(){

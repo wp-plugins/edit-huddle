@@ -29,3 +29,27 @@ function edithuddle_enqueue_scripts() {
     wp_enqueue_style('jquery-style', 'http://tim.edithuddle.com/static/jqueryui/css/custom-theme/jquery-ui-1.8.16.custom.css'); 
 }
 add_action('wp_enqueue_scripts', 'edithuddle_enqueue_scripts');
+
+function edithuddle_init() {
+	if(isset($_GET['edithuddle'])) {
+		var_dump( edithuddle_current_page_url() ); 
+		exit();
+	}
+}
+add_action('init', 'edithuddle_init');
+
+
+function edithuddle_current_page_url() {
+	$pageURL = 'http';
+	if ($_SERVER["HTTPS"] == "on") {
+		$pageURL .= "s";
+	}
+	
+	$pageURL .= "://";
+	$pageURL .= $_SERVER["SERVER_NAME"];
+	if ($_SERVER["SERVER_PORT"] != "80") {
+		$pageURL .= ":".$_SERVER["SERVER_PORT"];
+	}
+	$pageURL .= $_SERVER["REQUEST_URI"];
+	return $pageURL;
+}
