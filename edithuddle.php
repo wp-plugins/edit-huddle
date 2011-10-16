@@ -24,7 +24,7 @@ add_filter('the_content', 'edithuddle_add_post_content');
 
 
 function edithuddle_enqueue_scripts() {
-	wp_enqueue_script('fixit', '/wp-content/plugins/edithuddle/edithuddle.js', array('jquery-ui-button', 'jquery-ui-widget'));
+	wp_enqueue_script('fixit', '/wp-content/plugins/edit-huddle/edithuddle.js', array('jquery-ui-button', 'jquery-ui-widget'));
 	//wp_enqueue_script('fixit', 'http://tim.edithuddle.com/static/js/fixit.js', array('jquery-ui-button', 'jquery-ui-widget'));
     wp_enqueue_style('jquery-style', 'http://tim.edithuddle.com/static/jqueryui/css/custom-theme/jquery-ui-1.8.16.custom.css'); 
 }
