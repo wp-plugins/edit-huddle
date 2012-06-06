@@ -1,5 +1,5 @@
 === Edit Huddle ===
-Contributors: Tim Barsness
+Contributors: Tim Barsness mark@edithuddle.com
 Tags: edithuddle
 Requires at least: 2.0
 Tested up to: 3.2
